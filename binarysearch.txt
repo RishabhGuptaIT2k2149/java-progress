@@ -1,0 +1,27 @@
+public class binarySearch {
+    public static void main(String[] args) {
+        int[] arr = {1, 2,3, 4, 5, 18, 28, 45 , 48 , 59, 78, 97, 99};
+        int target = 3;
+        int start = 0;
+        int end = arr.length-1;
+        int mid = (arr.length-1)/2;
+        if(arr[mid] == target)
+        {
+            System.out.println(element found + arr[mid] );
+        }
+        else if (target < mid)
+        {
+            for (int i = arr[start] ; i < arr[mid] ; i++)
+            {
+                if (i==target)
+                    System.out.println(element found at + i);
+            }
+        } else if (target > mid) {
+            for (int i = arr[mid] ; i <= arr[end] ; i++)
+                if (i == target)
+                    System.out.println(element found at + i);
+        }
+    }
+
+}
+
